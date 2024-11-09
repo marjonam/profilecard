@@ -1,0 +1,106 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --inter: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card__img img {
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 100px;
+}
+
+body {
+  background-color: var(--grey-900);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  font-family: var(--inter);
+}
+
+.card__profile {
+  background-color: var(--grey-800);
+  color: var(--white);
+  text-align: center;
+  border-radius: 2px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 35px;
+}
+
+.card__heading {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.card__location {
+  color: #c4f82a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card__bio {
+  font-style: var(--inter);
+  margin-bottom: 20px;
+}
+
+.card__wrapper a {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--grey-700);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  gap: 8px;
+  line-height: 25px;
+}
+.card__wrapper a:active {
+  background-color: #c4f82a;
+}
+
+.card__heading {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
