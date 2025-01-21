@@ -35,75 +35,67 @@ a {
   text-decoration: none;
   display: inline-block;
 }
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   font-family: "Inter";
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
 }
 .card {
-  width: 384px;
-  height: 611px;
+  background-color: #1f1f1f;
   padding: 40px;
   border-radius: 12px;
-  background-color: #1f1f1f;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  justify-content: center;
   align-items: center;
 }
-.card__picture {
+.card__img {
   width: 88px;
-  height: 88px;
-  border-radius: 999px;
+  margin-bottom: 24px;
 }
 .card__name {
-  font-size: 24px;
+  color: white;
   font-weight: 600;
+  font-size: 24px;
   line-height: 36px;
-  margin-bottom: 4px;
+  padding-bottom: 4px;
 }
-.card__location {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
+.card__country {
   color: #c4f82a;
-}
-.card__bio {
   font-size: 14px;
-  font-weight: 400;
   line-height: 21px;
+  font-weight: 700;
+  padding-bottom: 24px;
 }
-.card__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-.card__list-item {
-  background-color: #333333;
-  padding: 12px;
-  border-radius: 8px;
-  width: 304px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card__desc {
   color: #fff;
+  line-height: 21px;
+  font-size: 14px;
+  padding-bottom: 24px;
+}
+.card__link {
+  width: 304px;
   font-size: 14px;
   font-weight: 700;
+  color: #fff;
+  background-color: #333333;
+  border-radius: 8px;
+  text-align: center;
   line-height: 21px;
+  text-decoration: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
   transition: 0.3s;
-  &:hover {
-    background-color: #c4f82a;
-    color: #333333;
-  }
+}
+.card__link:hover {
+  background-color: #c4f82a;
+  color: #333333;
+}
+.card__link:last-child {
+  margin-bottom: 0px;
 }

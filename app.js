@@ -1,58 +1,32 @@
 const body = document.body;
-function createElement(tag, options = {}) {
-  const element = document.createElement(tag);
-  if (options.className) element.classList.add(...options.className.split(" "));
-  if (options.textContent) element.textContent = options.textContent;
-  if (options.src) element.src = options.src;
-  if (options.href) element.href = options.href;
-  return element;
-}
-const card = createElement("div", { className: "card" });
-const image = createElement("img", {
-  className: "card__picture",
-  src: "./img/profile-pic.png",
-});
-const innerDiv = createElement("div", { className: "card__title" });
-const nameHeading = createElement("h1", {
-  className: "card__name",
-  textContent: "Jessica Randall",
-});
-const cardLocation = createElement("h1", {
-  className: "card__location",
-  textContent: "London, United Kingdom",
-});
-const cardBio = createElement("p", {
-  className: "card__bio",
-  textContent: `"Front-end developer and avid reader."`,
-});
-const cardList = createElement("div", { className: "card__list" });
-const gitHub = createElement("a", {
-  className: "card__list-item",
-  textContent: "GitHub",
-  href: "#",
-});
-const frontendmentor = createElement("a", {
-  className: "card__list-item",
-  textContent: "Frontend Mentor",
-  href: "#",
-});
-const linkedIn = createElement("a", {
-  className: "card__list-item",
-  textContent: "LinkedIn",
-  href: "#",
-});
-const twitter = createElement("a", {
-  className: "card__list-item",
-  textContent: "Twitter",
-  href: "#",
-});
-const instagram = createElement("a", {
-  className: "card__list-item",
-  textContent: "Instagram",
-  href: "#",
-});
-const h4 = createElement("h4", { className: "h4", textContent: "$149.99" });
+const card = document.createElement("div");
+const cardImg = document.createElement("img");
+const cardName = document.createElement("h1");
+const cardCountry = document.createElement("h2");
+const cardDesc = document.createElement("p");
+const a1 = document.createElement("a");
+const a2 = document.createElement("a");
+const a3 = document.createElement("a");
+const a4 = document.createElement("a");
+const a5 = document.createElement("a");
+card.classList.add("card");
+cardImg.classList.add("card__img");
+cardName.classList.add("card__name");
+cardCountry.classList.add("card__country");
+cardDesc.classList.add("card__desc");
+a1.classList.add("card__link");
+a2.classList.add("card__link");
+a3.classList.add("card__link");
+a4.classList.add("card__link");
+a5.classList.add("card__link");
+cardImg.setAttribute("src", "./img/profile-pic.png");
+cardName.textContent = "Jessica Randall";
+cardCountry.textContent = "London, United Kingdom";
+cardDesc.textContent = `"Front-end developer and avid reader."`;
+a1.textContent = "GitHub";
+a2.textContent = "Frontend Mentor";
+a3.textContent = "LinkedIn";
+a4.textContent = "Instagram";
+a5.textContent = "Twitter";
+card.append(cardImg, cardName, cardCountry, cardDesc, a1, a2, a3, a4, a5);
 body.appendChild(card);
-card.append(image, innerDiv, cardBio, cardList);
-innerDiv.append(nameHeading, cardLocation);
-cardList.append(gitHub, frontendmentor, linkedIn, twitter, instagram);
